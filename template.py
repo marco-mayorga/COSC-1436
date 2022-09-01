@@ -16,6 +16,9 @@ Assignment Description*/
 
 
 def main():
+    #clears screen
+    os.system('clear')
+
     # file name
     file_name = input("What is the file name: ")
 
@@ -30,15 +33,18 @@ def main():
     today_formatted = today.strftime("%B %d, %Y")
 
     # assignment description
-    description = input("Copy and paste assignment description: ")
+    description = input("Copy and paste assignment description from d2l: ")
 
     # asks user what chapter folder to put file in
     while True:
-        chapter_num = int(input("What chapter? (1-7): "))
+        chapter_num = int(
+            input("\nWhat chapter do i save the file to? (1-7): "))
         if chapter_num in range(1, 8):
+            os.system('clear')
+            print("File created!")
             break
         else:
-            print("Try again: ")
+            print("\nTry a number from 1-7: ")
 
     # changes to chapter folder
     save_where(chapter_num)
@@ -50,7 +56,7 @@ def main():
             f"/*{my_name}\n\n{course}\n\n{today_formatted}\n\n{description}*/\n\n")
         # makes a basic cpp function under my info
         cppfile.write(
-            "#include <iostream>\n\nint main()\n{\n\tstd::cout << \"Hello World\";\n\treturn 0;\n}")
+            "#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n\tcout << \"Hello World\";\n\treturn 0;\n}")
 
 # chooses directory to move into
 
