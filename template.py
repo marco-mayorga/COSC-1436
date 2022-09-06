@@ -2,6 +2,7 @@
 from datetime import date
 import os
 # Creates C++ files with the top of the file filled out like prof wants.
+# This is the template of how she wants it
 """
 /*Name
 
@@ -16,7 +17,7 @@ Assignment Description*/
 
 
 def main():
-    #clears screen
+    # clears screen
     os.system('clear')
 
     # file name
@@ -25,7 +26,7 @@ def main():
     # My name
     my_name = "Marco Mayorga"
 
-    # What Course this is
+    # What course this is
     course = "COSC-1436"
 
     # Gets todays date
@@ -59,8 +60,6 @@ def main():
             "#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n\tcout << \"Hello World\";\n\treturn 0;\n}")
 
 # chooses directory to move into
-
-
 def save_where(num):
 
     if num == 1:
@@ -78,5 +77,5 @@ def save_where(num):
     elif num == 7:
         os.chdir("Chapter7")
 
-
+#calls the main function and runs it.
 main()
