@@ -39,7 +39,7 @@ def main():
     # asks user what chapter folder to put file in
     while True:
         chapter_num = int(
-            input("\nWhat chapter do i save the file to? (1-7): "))
+            input("\nWhat chapter do I save the file to? (1-7): "))
         if chapter_num in range(1, 8):
             os.system('clear')
             print("File created!")
@@ -60,6 +60,8 @@ def main():
             "#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n\tcout << \"Hello World\";\n\treturn 0;\n}")
 
 # chooses directory to move into
+
+
 def save_where(num):
 
     if num == 1:
@@ -77,5 +79,6 @@ def save_where(num):
     elif num == 7:
         os.chdir("Chapter7")
 
-#calls the main function and runs it.
+
+# calls the main function and runs it.
 main()
