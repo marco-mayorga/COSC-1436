@@ -26,6 +26,7 @@ Sale Total: $10.75
 */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -39,7 +40,7 @@ int main()
 	double purchase_amount = 0;
 
 	// 2.Talk to the user and ask for purchase amount
-	cout << "Enter the amount of the purchase: " << endl;
+	cout << "Enter the amount of the purchase: ";
 
 	// 3.Store user input
 	cin >> purchase_amount;
@@ -52,9 +53,10 @@ int main()
 	double total_sales_tax = state_taxes + county_taxes;
 
 	// 5.Display
+	cout << fixed << showpoint << setprecision(2) << endl;
 	cout << "Purchase Amount: $" << purchase_amount << endl;
 	cout << "State Tax: $" << state_taxes << endl;
 	cout << "County Tax: $" << county_taxes << endl;
 	cout << "Total Tax: $" << total_sales_tax << endl;
-	cout << "The sum of the Sale is: $" << total_sales_tax;
+	cout << "Sale Total: $" << total_sales_tax;
 }
