@@ -38,14 +38,17 @@ def main():
 
     # asks user what chapter folder to put file in
     while True:
-        chapter_num = int(
-            input("\nWhat chapter do I save the file to? (1-7): "))
-        if chapter_num in range(1, 8):
-            os.system('clear')
-            print("File created!")
+        try:
+            chapter_num = int(
+                input("\nWhat chapter do I save the file to? (1-7): "))
             break
-        else:
+        except:
+            os.system('clear')
             print("\nTry a number from 1-7: ")
+
+    if chapter_num in range(1, 8):
+        os.system('clear')
+        print("File created!")
 
     # changes to chapter folder
     save_where(chapter_num)
