@@ -38,6 +38,10 @@ int main()
 
 	// 1.Variables
 	double purchase_amount = 0;
+	double state_taxes = 0;
+	double county_taxes = 0;
+	double total_sales_tax = 0;
+	double total_after_tax = 0;
 
 	// 2.Talk to the user and ask for purchase amount
 	cout << "Enter the amount of the purchase: ";
@@ -46,11 +50,12 @@ int main()
 	cin >> purchase_amount;
 
 	// 4.Calculations
-	double state_taxes = purchase_amount * state_tax_rate;
-	double county_taxes = purchase_amount * county_tax_rate;
+	state_taxes = purchase_amount * state_tax_rate;
+	county_taxes = purchase_amount * county_tax_rate;
 
 	// Step 1 and 4 together
-	double total_sales_tax = state_taxes + county_taxes;
+	total_sales_tax = state_taxes + county_taxes;
+	total_after_tax = total_sales_tax + purchase_amount;
 
 	// 5.Display
 	cout << fixed << showpoint << setprecision(2) << endl;
@@ -58,5 +63,5 @@ int main()
 	cout << "State Tax: $" << state_taxes << endl;
 	cout << "County Tax: $" << county_taxes << endl;
 	cout << "Total Tax: $" << total_sales_tax << endl;
-	cout << "Sale Total: $" << total_sales_tax;
+	cout << "Sale Total: $" << total_after_tax;
 }
