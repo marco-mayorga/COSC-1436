@@ -28,7 +28,7 @@ def main():
         file_name = input("What is the file name: ")
 
         # User name
-        my_name = input("What is your name: ")
+        my_name = "Marco Mayorga"
 
         # What course this is
         course = "COSC-1436"
