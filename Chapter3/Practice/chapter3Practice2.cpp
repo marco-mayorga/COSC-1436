@@ -16,6 +16,7 @@ int main()
 	// 1.Variables
 	ofstream outputFile;		   // create a ofstream named outputFile stream
 	int number1, number2, number3; // a numbers that will be written to the file
+	int sum;
 
 	// 2.Open a file- if it exists our code will overwrite the file. if it doesnt then we make a file.
 	outputFile.open("myNumbers.txt");
@@ -29,12 +30,16 @@ int main()
 	cout << "Enter a number: ";
 	cin >> number2;
 
-	// 4.Write numbers to the file.
-	outputFile << number1 << endl;
-	outputFile << number2 << endl;
-	outputFile << number3 << endl;
+	// 4. adding up all 3 numbers
+	sum = number1 + number2 + number3;
+
+	// 5.Write numbers to the file.
+	outputFile << "Number 1: " << number1 << endl;
+	outputFile << "Number 2: " << number2 << endl;
+	outputFile << "Number 3: " << number3 << endl;
+	outputFile << "Sum: " << sum << endl;
 	cout << "The numbers were saved to a file. \n";
 
-	// 5. Close the file
+	// 6. Close the file
 	outputFile.close(); // Closing the file
 }
