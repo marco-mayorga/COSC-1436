@@ -12,6 +12,7 @@ Input Validation: Do not accept a negative starting number.
 */
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -19,23 +20,25 @@ int main()
 {
 	// 1.Variables
 	int userInput;
-	int sum = 0;
+	long int sum = 0;
 	// 2.Ask User for 'type in here' && 3.Store user answer
 	cout << "Give me a positive integer: ";
 	cin >> userInput;
 	// 4.Calculations and logic
-	if (userInput < 0)
+	while (userInput < 0)
 	{
-		cout << "Thats not positive integer.";
+		cout << "Error: Enter a positive int: ";
+		cin >> userInput;
 	}
-	else
-	{
-		for (int i = 0; i <= userInput; i++)
-		{
-			sum += i;
-		}
-		cout << "The sum of all numbers inside " << userInput << " is: " << sum << endl;
+	// Using Sumation formula instead of looping.
+	
+	//sum = userInput*(userInput+1)/2;
+
+	//Using Looping
+	for (int i = 0; i <= userInput; i++){
+		sum += i;
 	}
+	cout << "The sum of all numbers inside " << userInput << " is: " << sum << endl;
 	// 5.Display
 	return 0;
 }

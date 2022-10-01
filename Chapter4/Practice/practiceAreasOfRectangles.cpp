@@ -4,10 +4,10 @@ COSC-1436
 
 September 22, 2022
 
-The area of a rectangle is the rectangle’s length times its width.
+The Area of a rectangle is the rectangle’s length times its width.
 Write a program that asks for the length and width of two rectangles.
-The program should tell the user which rectangle has the greater area,
-or if the areas are the same.
+The program should tell the user which rectangle has the greater Area,
+or if the Areas are the same.
 */
 
 #include <iostream>
@@ -41,22 +41,22 @@ int main()
 	rectangle2Area = rectangle2Length * rectangle2Width;
 	if (rectangle1Area > rectangle2Area)
 	{
-		cout << "The area of rectangle 1 is: " << rectangle1Area << endl;
-		cout << "The area of rectangle 2 is: " << rectangle2Area << endl;
+		cout << "The Area of rectangle 1 is: " << rectangle1Area << endl;
+		cout << "The Area of rectangle 2 is: " << rectangle2Area << endl;
 		cout << endl;
-		cout << "Hence The first rectangle's area is bigger" << endl;
+		cout << "Hence The first rectangle's Area is bigger" << endl;
 	}
 	else if (rectangle2Area > rectangle1Area)
 	{
-		cout << "The area of rectangle 2 is: " << rectangle2Area << endl;
-		cout << "The area of rectangle 1 is: " << rectangle1Area << endl;
+		cout << "The Area of rectangle 2 is: " << rectangle2Area << endl;
+		cout << "The Area of rectangle 1 is: " << rectangle1Area << endl;
 		cout << endl;
-		cout << "The second rectangle's area is bigger" << endl;
+		cout << "The second rectangle's Area is bigger" << endl;
 	}
 	else
 	{
-		cout << "The area of rectangle 1 is: " << rectangle1Area << endl;
-		cout << "The area of rectangle 2 is: " << rectangle2Area << endl;
+		cout << "The Area of rectangle 1 is: " << rectangle1Area << endl;
+		cout << "The Area of rectangle 2 is: " << rectangle2Area << endl;
 		cout << endl;
 		cout << "The Area of both rectangles are the same!" << endl;
 	}
