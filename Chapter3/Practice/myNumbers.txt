@@ -1,4 +1,4 @@
-Number 1: 33
-Number 2: 654
-Number 3: 22
-Sum: 709
+Number 1: 5
+Number 2: 6
+Number 3: 5
+Sum: 16
